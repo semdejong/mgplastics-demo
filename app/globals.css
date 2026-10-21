@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
 :root {
-  --brand: #1d4ed8;
+  --brand: #0e3faa;
+  --brand-dark: #0b3288;
   --brand-fg: #ffffff;
-  --accent: #f59e0b;
+  --ink: #404040;
   --background: #ffffff;
-  --foreground: #0f172a;
-  --muted: #f1f5f9;
+  --foreground: #404040;
+  --muted: #f2f4f7;
+  --line: #d5dbe3;
+  --danger: #8e1b1b;
+  --accent: #0e3faa;
 }
 
 @theme inline {
   --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
   --color-brand-fg: var(--brand-fg);
-  --color-accent: var(--accent);
+  --color-ink: var(--ink);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --color-line: var(--line);
+  --color-danger: var(--danger);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility wrap {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding-inline: 1.25rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.nums {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+}
+
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+.weld-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-dasharray: 0.016 0.01;
+  stroke-dashoffset: 0;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .weld-line {
+      stroke-dashoffset: 0.12;
+      animation: weld-draw linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+  }
+}
+
+@keyframes weld-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .weld-line {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
 }

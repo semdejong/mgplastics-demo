@@ -1,41 +1,57 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
-import type { CSSProperties } from "react";
+import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
-import { content } from "@/content";
 import SleadsBadge from "@/components/SleadsBadge";
+import MobileBar from "@/components/MobileBar";
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const archivo = Archivo({
+  subsets: ["latin"],
+  variable: "--font-archivo",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: content.seo.title,
-  description: content.seo.description,
+  title: {
+    default: "MG Plastics | Lateislabben op maat, binnen 7 werkdagen",
+    template: "%s | MG Plastics",
+  },
+  description:
+    "Lateislabben op maat uit Zutphen. Zo'n 50 profielen in zwart, wit en grijs uit voorraad. Gezaagd, gelast en ingepakt, binnen 7 werkdagen in huis.",
   robots: {
     index: false,
     follow: false,
     nocache: true,
     googleBot: { index: false, follow: false, noimageindex: true },
   },
-  icons: content.company.logo ? { icon: content.company.logo } : undefined,
+  icons: { icon: "/img/logo-mgplastics.png" },
 };
 
-export const viewport: Viewport = { themeColor: content.colors.primary };
-
-const c = content.colors;
-const themeVars = {
-  "--brand": c.primary,
-  "--brand-fg": c.primaryForeground,
-  "--accent": c.accent,
-  "--background": c.background,
-  "--foreground": c.foreground,
-  "--muted": c.muted,
-} as CSSProperties;
+export const viewport: Viewport = { themeColor: "#0E3FAA" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang={content.seo.lang} style={themeVars} className={`${geistSans.variable} h-full scroll-smooth antialiased`}>
-      <body className="min-h-full flex flex-col">
-        {children}
+    <html lang="nl" className={`${archivo.variable} ${inter.variable} h-full antialiased`}>
+      <body className="flex min-h-full flex-col">
+        <a
+          href="#inhoud"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:bg-white focus:px-4 focus:py-2"
+        >
+          Ga naar inhoud
+        </a>
+        <SiteHeader />
+        <main id="inhoud" className="flex-1">
+          {children}
+        </main>
+        <SiteFooter />
+        <MobileBar />
         <SleadsBadge />
       </body>
     </html>
