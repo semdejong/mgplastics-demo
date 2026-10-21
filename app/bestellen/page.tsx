@@ -24,7 +24,7 @@ export default function BestellenPage() {
         </div>
       </header>
 
-      <section className="wrap py-12 md:py-16" aria-labelledby="stappen">
+      <section data-section="stappen" className="wrap py-12 md:py-16" aria-labelledby="stappen">
         <h2 id="stappen" className="text-2xl font-semibold">
           In drie stappen
         </h2>
@@ -41,7 +41,7 @@ export default function BestellenPage() {
         </ul>
       </section>
 
-      <section className="border-t border-line bg-muted" aria-labelledby="formulier">
+      <section data-section="formulier" className="border-t border-line bg-muted" aria-labelledby="formulier">
         <div className="wrap py-12 md:py-16">
           <h2 id="formulier" className="text-2xl font-semibold">
             Uw maatlijst
@@ -51,7 +51,7 @@ export default function BestellenPage() {
         </div>
       </section>
 
-      <section className="wrap py-12 md:py-16" aria-labelledby="bellen">
+      <section data-section="bellen" className="wrap py-12 md:py-16" aria-labelledby="bellen">
         <h2 id="bellen" className="text-2xl font-semibold">
           Liever bellen of mailen?
         </h2>
@@ -74,7 +74,7 @@ export default function BestellenPage() {
         </p>
       </section>
 
-      <section className="border-t border-line" aria-labelledby="faq-bestellen">
+      <section data-section="faq-bestellen" className="border-t border-line" aria-labelledby="faq-bestellen">
         <div className="wrap py-12 md:py-16">
           <h2 id="faq-bestellen" className="text-2xl font-semibold">
             Vragen over bestellen

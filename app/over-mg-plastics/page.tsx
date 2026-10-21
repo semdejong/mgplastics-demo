@@ -22,7 +22,7 @@ export default function OverPage() {
           </p>
         </div>
       </header>
-      <section className="wrap py-12 md:py-16">
+      <section data-section="over-mg-plastics-intro" className="wrap py-12 md:py-16">
         <p className="max-w-3xl text-lg leading-relaxed">
           MG Plastics richt zich op een snelle, betrouwbare en efficiënte levering van een totaal productenpakket voor woning- en utiliteitsbouw, de prefab betonindustrie, infrastructurele werken en geluidbeheersing.
         </p>
@@ -42,7 +42,7 @@ export default function OverPage() {
         </p>
       </section>
 
-      <section className="border-t border-line" aria-labelledby="aanpak">
+      <section data-section="aanpak" className="border-t border-line" aria-labelledby="aanpak">
         <div className="wrap py-12 md:py-16">
           <h2 id="aanpak" className="text-3xl font-semibold">
             Hoe wij werken
@@ -65,7 +65,7 @@ export default function OverPage() {
         </div>
       </section>
 
-      <section className="border-t border-line bg-muted" aria-labelledby="kernwaarden">
+      <section data-section="kernwaarden" className="border-t border-line bg-muted" aria-labelledby="kernwaarden">
         <div className="wrap py-12 md:py-16">
           <h2 id="kernwaarden" className="text-3xl font-semibold">
             Onze kernwaarden
@@ -85,7 +85,7 @@ export default function OverPage() {
         </div>
       </section>
 
-      <section className="wrap grid items-start gap-8 py-12 md:py-16 lg:grid-cols-2">
+      <section data-section="over-mg-plastics-sectie2" className="wrap grid items-start gap-8 py-12 md:py-16 lg:grid-cols-2">
         <figure className="border border-line">
           <Image
             src="/img/werkplaats-hf-lasmachine-1.jpg"

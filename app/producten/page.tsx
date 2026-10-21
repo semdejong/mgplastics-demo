@@ -55,7 +55,7 @@ function Catalog({
   muted?: boolean;
 }) {
   return (
-    <section className={muted ? "border-t border-line bg-muted" : ""} aria-labelledby={id}>
+    <section data-section={id} className={muted ? "border-t border-line bg-muted" : ""} aria-labelledby={id}>
       <div className="wrap py-12 md:py-16">
         <h2 id={id} className="text-2xl font-semibold">
           {title}

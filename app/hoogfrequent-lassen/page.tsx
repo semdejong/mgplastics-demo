@@ -32,7 +32,7 @@ export default function HoogfrequentPage() {
         </div>
       </header>
 
-      <section className="wrap grid gap-10 py-12 md:py-16 lg:grid-cols-2">
+      <section data-section="hoogfrequent-lassen-intro" className="wrap grid gap-10 py-12 md:py-16 lg:grid-cols-2">
         <div>
           <h2 className="text-2xl font-semibold">Wat is hoogfrequent lassen?</h2>
           <div className="mt-4 space-y-4 text-lg leading-relaxed">
@@ -57,7 +57,7 @@ export default function HoogfrequentPage() {
         </figure>
       </section>
 
-      <section className="border-t border-line" aria-labelledby="las-stappen">
+      <section data-section="las-stappen" className="border-t border-line" aria-labelledby="las-stappen">
         <div className="wrap py-12 md:py-16">
           <h2 id="las-stappen" className="text-2xl font-semibold">
             Zo ontstaat de las
@@ -74,7 +74,7 @@ export default function HoogfrequentPage() {
         </div>
       </section>
 
-      <section className="border-t border-line bg-muted" aria-labelledby="machines">
+      <section data-section="machines" className="border-t border-line bg-muted" aria-labelledby="machines">
         <div className="wrap py-12 md:py-16">
           <h2 id="machines" className="text-2xl font-semibold">
             Machines van 3 t/m 10 kW

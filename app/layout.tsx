@@ -39,6 +39,14 @@ export const viewport: Viewport = { themeColor: "#0E3FAA" };
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="nl" className={`${archivo.variable} ${inter.variable} h-full antialiased`}>
+      <head>
+        <script
+          async
+          src="https://sleads-demo-analytics.vercel.app/t.js"
+          data-demo="mgplastics-demo"
+          data-endpoint="https://basic-tiger-117.convex.site/track"
+        />
+      </head>
       <body className="flex min-h-full flex-col">
         <a
           href="#inhoud"

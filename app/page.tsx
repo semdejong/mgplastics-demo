@@ -30,7 +30,7 @@ const swatches = [
 export default function HomePage() {
   return (
     <>
-      <section className="border-b border-line bg-white">
+      <section data-section="home-intro" className="border-b border-line bg-white">
         <div className="wrap grid items-center gap-10 py-12 md:py-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
           <div>
             <p className="text-base font-semibold text-brand">{company.headerLine}</p>
@@ -41,7 +41,7 @@ export default function HomePage() {
               Gezaagd, gelast en ingepakt. Zo&apos;n 50 profielen in zwart, wit en grijs uit voorraad.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Link href="/bestellen" className={btnPrimary}>
+              <Link data-cta="offerte" href="/bestellen" className={btnPrimary}>
                 Bestelling aanvragen
               </Link>
               <a href={`tel:${company.phoneTel}`} className={btnSecondary}>
@@ -91,7 +91,7 @@ export default function HomePage() {
         <WeldSeam />
       </section>
 
-      <section className="bg-muted" aria-labelledby="twee-routes">
+      <section data-section="twee-routes" className="bg-muted" aria-labelledby="twee-routes">
         <div className="wrap py-14 md:py-20">
           <h2 id="twee-routes" className="max-w-3xl text-3xl font-semibold">
             Twee routes, één werkplaats
@@ -138,7 +138,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="op-het-kozijn">
+      <section data-section="op-het-kozijn" aria-labelledby="op-het-kozijn">
         <div className="wrap py-14 md:py-20">
           <h2 id="op-het-kozijn" className="text-3xl font-semibold">
             Waar het op het kozijn zit
@@ -152,7 +152,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-muted" aria-labelledby="profielkiezer">
+      <section data-section="profielkiezer" className="bg-muted" aria-labelledby="profielkiezer">
         <div className="wrap py-14 md:py-20">
           <h2 id="profielkiezer" className="text-3xl font-semibold">
             Profielkiezer
@@ -164,7 +164,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-muted" aria-labelledby="kleuren-maten">
+      <section data-section="kleuren-maten" className="bg-muted" aria-labelledby="kleuren-maten">
         <div className="wrap py-14 md:py-20">
           <h2 id="kleuren-maten" className="text-3xl font-semibold">
             Kleuren en maten
@@ -213,7 +213,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="zo-werkt-bestellen">
+      <section data-section="zo-werkt-bestellen" aria-labelledby="zo-werkt-bestellen">
         <div className="wrap py-14 md:py-20">
           <h2 id="zo-werkt-bestellen" className="text-3xl font-semibold">
             Zo werkt bestellen
@@ -223,7 +223,7 @@ export default function HomePage() {
             <OrderSteps />
           </div>
           <p className="mt-6 text-lg">Spoedleveringen in overleg. We denken oplossingsgericht met u mee.</p>
-          <Link href="/bestellen" className={`${btnPrimary} mt-6`}>
+          <Link data-cta="offerte" href="/bestellen" className={`${btnPrimary} mt-6`}>
             Bestelling aanvragen
           </Link>
           <h3 className="mt-14 text-2xl font-semibold">Wat er in de verpakking zit</h3>
@@ -239,7 +239,7 @@ export default function HomePage() {
         <WeldSeam />
       </section>
 
-      <section className="bg-muted" aria-labelledby="eigen-productie">
+      <section data-section="eigen-productie" className="bg-muted" aria-labelledby="eigen-productie">
         <div className="wrap py-14 md:py-20">
           <h2 id="eigen-productie" className="text-3xl font-semibold">
             Eigen productie
@@ -282,7 +282,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="hf-opdracht">
+      <section data-section="hf-opdracht" aria-labelledby="hf-opdracht">
         <div className="wrap grid gap-8 py-14 md:py-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
           <div>
             <h2 id="hf-opdracht" className="text-3xl font-semibold">
@@ -318,7 +318,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-muted" aria-labelledby="ook-leverbaar">
+      <section data-section="ook-leverbaar" className="bg-muted" aria-labelledby="ook-leverbaar">
         <div className="wrap py-14 md:py-20">
           <h2 id="ook-leverbaar" className="text-3xl font-semibold">
             Ook leverbaar
@@ -354,7 +354,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="waar-wij-voor-staan">
+      <section data-section="waar-wij-voor-staan" aria-labelledby="waar-wij-voor-staan">
         <div className="wrap py-14 md:py-20">
           <h2 id="waar-wij-voor-staan" className="text-3xl font-semibold">
             Waar wij voor staan
@@ -383,7 +383,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-ink text-white" aria-labelledby="voor-wie">
+      <section data-section="voor-wie" className="bg-ink text-white" aria-labelledby="voor-wie">
         <div className="wrap py-14 md:py-20">
           <h2 id="voor-wie" className="text-3xl font-semibold text-white">
             Voor wie
@@ -401,7 +401,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="faq">
+      <section data-section="faq" aria-labelledby="faq">
         <div className="wrap py-14 md:py-20">
           <h2 id="faq" className="text-3xl font-semibold">
             Veelgestelde vragen
@@ -412,7 +412,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-t border-line bg-muted" aria-labelledby="contact-route">
+      <section data-section="contact-route" className="border-t border-line bg-muted" aria-labelledby="contact-route">
         <div className="wrap grid gap-10 py-14 md:grid-cols-2 md:py-20">
           <div>
             <h2 id="contact-route" className="text-3xl font-semibold">

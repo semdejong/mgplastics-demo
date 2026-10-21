@@ -19,7 +19,7 @@ export default function ContactPage() {
           </p>
         </div>
       </header>
-      <section className="wrap py-12 md:py-16" aria-labelledby="postbussen">
+      <section data-section="postbussen" className="wrap py-12 md:py-16" aria-labelledby="postbussen">
         <h2 id="postbussen" className="text-2xl font-semibold">
           Vier adressen, elk met een taak
         </h2>

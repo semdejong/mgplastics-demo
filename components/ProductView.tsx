@@ -126,7 +126,7 @@ export default function ProductView({ product }: { product: Product }) {
       </div>
 
       {product.group === "lateislabbe" && product.slug !== "dubbelneus-profiel" && (
-        <section className="border-t border-line bg-muted" aria-labelledby="kenmerken">
+        <section data-section="kenmerken" className="border-t border-line bg-muted" aria-labelledby="kenmerken">
           <div className="wrap py-12 md:py-16">
             <h2 id="kenmerken" className="text-2xl font-semibold">
               Dezelfde basis
@@ -147,7 +147,7 @@ export default function ProductView({ product }: { product: Product }) {
       )}
 
       {sheet && (
-        <section className="border-t border-line" aria-labelledby="meesturen">
+        <section data-section="meesturen" className="border-t border-line" aria-labelledby="meesturen">
           <div className="wrap grid gap-8 py-12 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:py-16">
             <div>
               <h2 id="meesturen" className="text-2xl font-semibold">
@@ -171,7 +171,7 @@ export default function ProductView({ product }: { product: Product }) {
       )}
 
       {product.sections?.map((section) => (
-        <section key={section.id} id={section.id} className="border-t border-line">
+        <section data-section={section.id} key={section.id} id={section.id} className="border-t border-line">
           <div className="wrap grid items-start gap-6 py-12 md:grid-cols-[auto_minmax(0,1fr)]">
             {section.id === "ademend" && (
               <span className="flex h-24 w-24 items-center justify-center border border-line bg-muted text-brand">
@@ -191,7 +191,7 @@ export default function ProductView({ product }: { product: Product }) {
       ))}
 
       {sheet && sheet.related.length > 0 && !product.showChooser && (
-        <section className="border-t border-line bg-muted" aria-labelledby="verder">
+        <section data-section="verder" className="border-t border-line bg-muted" aria-labelledby="verder">
           <div className="wrap py-12 md:py-16">
             <h2 id="verder" className="text-2xl font-semibold">
               Verder in het assortiment
@@ -204,7 +204,7 @@ export default function ProductView({ product }: { product: Product }) {
       )}
 
       {product.showChooser && (
-        <section className="border-t border-line bg-muted" aria-labelledby="kies-profiel">
+        <section data-section="kies-profiel" className="border-t border-line bg-muted" aria-labelledby="kies-profiel">
           <div className="wrap py-12 md:py-16">
             <h2 id="kies-profiel" className="text-2xl font-semibold">
               Kies een profiel

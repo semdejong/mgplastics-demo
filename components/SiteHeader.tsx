@@ -119,6 +119,7 @@ export default function SiteHeader() {
           Bel {company.phoneDisplay}
         </a>
         <Link
+          data-cta="offerte"
           href="/bestellen"
           className="hidden h-11 shrink-0 items-center justify-center whitespace-nowrap bg-brand px-5 text-base font-semibold text-white hover:bg-brand-dark xl:inline-flex"
         >

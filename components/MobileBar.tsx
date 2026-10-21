@@ -21,6 +21,7 @@ export default function MobileBar() {
           Bel {company.phoneDisplay}
         </a>
         <Link
+          data-cta="offerte"
           href="/bestellen"
           className="inline-flex min-h-11 items-center justify-center whitespace-nowrap bg-brand px-2 text-center text-base font-semibold leading-none text-white"
         >
